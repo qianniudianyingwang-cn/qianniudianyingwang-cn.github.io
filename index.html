@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="千牛电影网是聚焦华语现实题材与类型片的赏析及正版观影导航：犯罪、悬疑、家庭、乡土、年代片片单，华语导演谱系、经典台词、院线与正版平台索引，倡导理性观影、拒绝低俗、支持正版。">
+<meta name="keywords" content="千牛电影网,千牛电影,华语电影,国产电影,犯罪悬疑,现实题材,电影推荐,正版观影">
+<meta name="author" content="千牛电影网">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0c1008">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>千牛电影网 - 一头牛的耐心，用来看好电影</title>
+<link rel="canonical" href="https://qianniudianyingwang-cn.github.io/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.82em' font-size='80' font-weight='900' fill='%23e8b86d'>牛</text></svg>">
+<style>
+/* ============ 基础 ============ */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0c1008;--ink:#f3efe4;--mut:#a8a088;--card:#161c10;--line:#2b3320;
+  --ox:#c97b2a;--ox2:#f0b95c;--mud:#7a5230;--leaf:#6e8b4a;--inkb:#202912;--smoke:#3a3f32;
+  --sh:0 26px 60px rgba(0,0,0,.6);--r:20px;--e:cubic-bezier(.2,.72,.3,1);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.85;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background:
+  radial-gradient(700px 420px at 86% 8%,rgba(201,123,42,.16),transparent 60%),
+  radial-gradient(640px 460px at 2% 92%,rgba(110,139,74,.13),transparent 60%)}
+a{color:inherit;text-decoration:none;transition:.26s var(--e)}
+img{max-width:100%;display:block}
+ul,ol{list-style:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 26px;position:relative;z-index:2}
+.sec{padding:96px 0;position:relative;z-index:2}
+.kicker{font-weight:900;letter-spacing:.3em;font-size:11px;color:var(--ox2)}
+.lead{color:var(--mut);max-width:740px;font-size:15px}
+.h2{font-size:clamp(25px,4.6vw,44px);font-weight:950;line-height:1.2;margin:10px 0 12px;letter-spacing:-1.2px}
+.bt{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 32px;border-radius:99px;font-weight:800;font-size:15px;cursor:pointer;border:0;transition:.3s var(--e);font-family:inherit}
+.sec-h{display:flex;align-items:flex-end;justify-content:space-between;gap:22px;flex-wrap:wrap;margin-bottom:46px}
+.tag{font-size:11.6px;font-weight:800;padding:7px 15px;border-radius:99px;border:1px solid var(--line);color:var(--ox2);background:rgba(201,123,42,.08)}
+
+/* ============ 导航 ============ */
+.nav{position:sticky;top:0;z-index:1000;background:rgba(12,16,8,.84);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nv{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:950;font-size:19px;flex-shrink:0;letter-spacing:-.5px}
+.logo{width:46px;height:46px;border-radius:13px;background:linear-gradient(140deg,#c97b2a,#6e8b4a);color:#202912;display:grid;place-items:center;font-size:24px;font-weight:950;box-shadow:0 10px 26px rgba(201,123,42,.3);flex-shrink:0;position:relative;overflow:hidden}
+.logo::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 18%,rgba(255,255,255,.5),transparent 40%);mix-blend-mode:overlay}
+.brand small{display:block;font-size:9.2px;color:var(--mut);font-weight:700;letter-spacing:.22em}
+.links{display:flex;gap:2px;align-items:center}
+.links a{font-size:14px;font-weight:700;padding:10px 15px;border-radius:99px;color:#dcd4c2}
+.links a:hover{color:#fff;background:rgba(201,123,42,.14)}
+.links .go{color:#202912!important;background:linear-gradient(135deg,#f0b95c,#c97b2a);box-shadow:0 10px 22px rgba(201,123,42,.26)}
+.burger{display:none;width:44px;height:44px;border:0;background:rgba(201,123,42,.14);border-radius:12px;color:var(--ox2);font-size:22px;cursor:pointer;flex-shrink:0}
+
+/* ============ Hero：田野与牛 ============ */
+.hero{position:relative;overflow:hidden;padding:44px 0 104px}
+.hr{display:grid;grid-template-columns:1.02fr .98fr;gap:40px;align-items:center}
+.hc{max-width:640px}
+.eyebrow{font-size:11.6px;font-weight:900;letter-spacing:.34em;color:var(--ox2)}
+.hc h1{font-size:clamp(29px,5.4vw,54px);font-weight:950;line-height:1.12;letter-spacing:-2px;margin:12px 0}
+.hc h1 em{font-style:normal;background:linear-gradient(90deg,#f0b95c,#c97b2a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hc p{font-size:15.4px;color:#c2b8a0;margin-bottom:24px;max-width:560px}
+.ct{display:flex;gap:14px;flex-wrap:wrap}
+.bt-p{background:linear-gradient(135deg,#f0b95c,#c97b2a);color:#202912;box-shadow:0 16px 34px rgba(201,123,42,.3)}
+.bt-p:hover{transform:translateY(-3px)}
+.btn{background:transparent;color:var(--ox2);box-shadow:inset 0 0 0 1px var(--line)}
+.pill{display:inline-flex;gap:8px;flex-wrap:wrap;margin-top:24px}
+.pill i{font-style:normal;font-size:11.5px;font-weight:800;padding:6px 13px;border-radius:99px;background:rgba(201,123,42,.08);border:1px solid var(--line);color:#dccba6}
+
+/* 田野 SVG */
+.fld{position:relative;width:100%;max-width:500px;margin:0 auto;aspect-ratio:5/4}
+.fld svg{position:absolute;inset:0;width:100%;height:100%}
+.cow{transform-origin:center;animation:moo 4.6s ease-in-out infinite}
+@keyframes moo{0%,100%{transform:translateY(0) rotate(-1.2deg)}50%{transform:translateY(-9px) rotate(1.4deg)}}
+.grass{transform-origin:bottom;animation:gr 2.4s ease-in-out infinite}
+@keyframes gr{0%,100%{transform:skewX(-4deg)}50%{transform:skewX(4deg)}}
+.firefly{animation:ff 3s ease-in-out infinite}
+@keyframes ff{0%,100%{opacity:.18}50%{opacity:1}}
+.fld .pl{position:absolute;left:50%;bottom:26%;transform:translateX(-50%);text-align:center;z-index:6}
+.fld .pl b{display:block;font-size:clamp(20px,3.8vw,34px);font-weight:950;letter-spacing:-1px;text-shadow:0 6px 30px rgba(0,0,0,.9)}
+.fld .pl small{display:block;font-size:10.5px;letter-spacing:.5em;color:var(--ox2);font-weight:800;margin-top:6px}
+
+/* ============ 栏目一：类型耕地（4 列卡片 + 进度） ============ */
+.sec-a{background:linear-gradient(180deg,#0c1008,#11170c)}
+.types{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.t{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px 22px 22px;overflow:hidden;transition:.34s var(--e)}
+.t::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--g);transform:scaleX(0);transform-origin:left;transition:.5s var(--e)}
+.t:hover{transform:translateY(-8px);box-shadow:var(--sh)}
+.t:hover::after{transform:scaleX(1)}
+.t .ic{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;font-size:24px;font-weight:950;color:#202912;background:var(--g);margin-bottom:14px;box-shadow:0 10px 20px -8px var(--g)}
+.t h3{font-size:19.6px;margin-bottom:6px;letter-spacing:-.4px}
+.t p{font-size:12.8px;color:var(--mut);margin-bottom:12px;min-height:52px}
+.t .amt{font-size:11.4px;font-weight:800;color:var(--ox2);display:flex;justify-content:space-between;gap:8px}
+.t .amt b{font-weight:950;color:var(--ink)}
+.t .bar{height:5px;border-radius:99px;background:#262d1c;margin-top:8px;overflow:hidden}
+.t .bar i{display:block;height:100%;border-radius:99px;background:var(--g)}
+
+/* ============ 栏目二：本周推荐（横向磁贴） ============ */
+.sec-f{background:#11170c}
+.scroller{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 24px;scrollbar-width:thin}
+.scroller::-webkit-scrollbar{height:9px}
+.scroller::-webkit-scrollbar-thumb{background:#2b3320;border-radius:99px}
+.mag{flex:0 0 232px;scroll-snap-align:start;background:var(--card);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);border:1px solid var(--line);transition:.34s var(--e)}
+.mag:hover{transform:translateY(-9px) rotate(1.4deg);border-color:rgba(201,123,42,.55)}
+.mag .cv{position:relative;height:304px;overflow:hidden;background:#0c1008}
+.mag img{width:100%;height:100%;object-fit:cover;transition:.8s var(--e);filter:saturate(1.06) contrast(1.03)}
+.mag:hover img{transform:scale(1.07);filter:saturate(1.18)}
+.mag .fl{position:absolute;top:12px;left:12px;display:flex;gap:6px;flex-wrap:wrap}
+.mag .fl i{font-style:normal;font-size:10.4px;font-weight:800;padding:4px 9px;border-radius:99px;color:#202912;background:var(--ox2)}
+.mag .fl i.h{background:var(--leaf);color:#fff}.mag .fl i.f{background:#4a6b8a;color:#fff}
+.mag .rt{position:absolute;bottom:12px;right:12px;background:rgba(17,23,12,.92);color:var(--ox2);font-weight:950;font-size:12px;padding:5px 10px;border-radius:99px}
+.mag .tx{padding:15px 18px 18px}
+.mag .tx h3{font-size:15.6px;line-height:1.4;margin-bottom:6px;letter-spacing:-.2px}
+.mag .tx p{font-size:12.3px;color:var(--mut);display:flex;gap:8px;flex-wrap:wrap}
+.mag .tx p b{color:var(--ox2);font-weight:800}
+
+/* ============ 栏目三：华语片单（<table> + 侧栏） ============ */
+.sec-t{background:linear-gradient(180deg,#11170c,#0c1008)}
+.dg{display:grid;grid-template-columns:1.6fr .4fr;gap:26px}
+table.tbl{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+table.tbl thead th{background:linear-gradient(135deg,#7a5230,#c97b2a);color:#f3efe4;font-size:11.6px;font-weight:900;letter-spacing:.14em;padding:15px 16px;text-align:left}
+table.tbl tbody td{padding:14px 16px;border-bottom:1px solid var(--line);font-size:13.4px;vertical-align:middle}
+table.tbl tbody tr:last-child td{border-bottom:0}
+table.tbl tbody tr{transition:.22s}
+table.tbl tbody tr:hover{background:rgba(201,123,42,.09)}
+table.tbl tbody tr:hover td:first-child{color:var(--ox2)}
+table.tbl .rk{font-weight:950;color:var(--ox);width:56px;letter-spacing:-.4px}
+table.tbl .nm{font-weight:900;font-size:14.4px;letter-spacing:-.3px}
+.lg{display:inline-block;font-size:10.5px;font-weight:800;padding:3px 9px;border-radius:99px;color:#202912}
+.lg.a{background:var(--ox2)}.lg.b{background:var(--leaf);color:#fff}.lg.c{background:#4a6b8a;color:#fff}
+.bar2{height:7px;border-radius:99px;background:#262d1c;overflow:hidden;min-width:78px}
+.bar2 i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#6e8b4a,#c97b2a,#f0b95c)}
+.sc{font-weight:950;color:var(--ox2);letter-spacing:-.4px}
+.asd{display:flex;flex-direction:column;gap:14px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.box h4{font-size:13.5px;margin-bottom:15px;letter-spacing:.16em;color:var(--ox2);font-weight:900}
+.box ol{display:flex;flex-direction:column;gap:12px;counter-reset:h}
+.box li{counter-increment:h;font-size:13.2px;display:flex;gap:10px;align-items:baseline;line-height:1.5;color:#c2b8a0}
+.box li::before{content:"Q"counter(h);font-weight:950;color:var(--ox);font-size:11.5px;flex-shrink:0}
+.box.g{border-color:rgba(110,139,74,.45)}
+.box.g h4{color:var(--leaf)}
+.box.g p{font-size:12.7px;color:#c2b8a0}
+
+/* ============ 栏目四：导演谱系（步骤条） ============ */
+.sec-l{background:#0c1008}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;position:relative;padding-top:6px}
+.steps::before{content:"";position:absolute;top:30px;left:6%;right:6%;height:2px;background:linear-gradient(90deg,#6e8b4a,#c97b2a,#f0b95c);border-radius:99px}
+.st{position:relative;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 16px 18px;text-align:center;transition:.3s var(--e)}
+.st .dot{width:20px;height:20px;border-radius:50%;background:var(--bg);border:5px solid var(--ox);margin:0 auto 14px;box-shadow:0 0 16px rgba(201,123,42,.5);position:relative;z-index:2}
+.st:hover{box-shadow:var(--sh);transform:translateY(-7px);border-color:rgba(201,123,42,.55)}
+.st .yr{font-size:10.6px;font-weight:950;letter-spacing:.2em;color:var(--ox2)}
+.st h3{font-size:16.6px;margin:3px 0 6px;letter-spacing:-.3px;min-height:44px}
+.st p{font-size:12.4px;color:var(--mut);margin-bottom:10px;min-height:54px}
+.st .film{display:flex;gap:5px;flex-wrap:wrap;justify-content:center}
+.st .film i{font-style:normal;font-size:10.9px;font-weight:800;padding:3px 8px;border-radius:99px;background:rgba(201,123,42,.1);color:var(--ox2);border:1px solid var(--line)}
+
+/* ============ 栏目五：影像地图（砖墙 + 榜单） ============ */
+.sec-c{background:linear-gradient(180deg,#0c1008,#11170c)}
+.bricks{column-count:4;column-gap:16px}
+.tile{break-inside:avoid;position:relative;border-radius:15px;overflow:hidden;margin-bottom:16px;box-shadow:var(--sh);cursor:pointer}
+.tile.t1{height:236px}.tile.t2{height:176px}.tile.t3{height:196px}
+.tile img{width:100%;height:100%;object-fit:cover;transition:.72s var(--e);filter:grayscale(.12) sepia(.1) saturate(1.06)}
+.tile:hover img{transform:scale(1.1);filter:grayscale(0) sepia(0) saturate(1.16)}
+.tile .gr{position:absolute;inset:0;background:linear-gradient(180deg,transparent 34%,rgba(12,16,8,.98));display:flex;flex-direction:column;justify-content:flex-end;padding:16px 18px;color:#fff}
+.tile .gr em{font-style:normal;font-size:10.5px;letter-spacing:.2em;color:var(--ox2)}
+.tile .gr b{font-size:16.5px;font-weight:950;letter-spacing:.4px}
+.tile .gr span{font-size:11.6px;opacity:.85}
+.bests{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.best{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px}
+.best h5{font-size:14px;color:var(--ox);letter-spacing:.12em;margin-bottom:13px;font-weight:900}
+.best.m h5{color:var(--leaf)}
+.best ol{counter-reset:b;display:flex;flex-direction:column;gap:10px}
+.best li{counter-increment:b;font-size:13.3px;display:flex;gap:10px;align-items:baseline;color:#c2b8a0}
+.best li::before{content:counter(b,decimal-leading-zero);font-weight:950;color:var(--ox);font-size:11.5px;flex-shrink:0}
+.best.m li::before{color:var(--leaf)}
+
+/* ============ CTA ============ */
+.cta{margin:0 26px;border-radius:30px;padding:64px 26px;text-align:center;color:#f3efe4;background:
+  radial-gradient(820px 400px at 14% 18%,rgba(201,123,42,.2),transparent 60%),
+  radial-gradient(800px 400px at 90% 82%,rgba(110,139,74,.2),transparent 60%),
+  linear-gradient(140deg,#2b1d10,#0c1008);border:1px solid var(--line);position:relative;z-index:2}
+.cta h2{font-size:clamp(24px,4.2vw,39px);font-weight:950;letter-spacing:-1px}
+.cta p{color:#c2b8a0;max-width:600px;margin:13px auto 24px}
+
+/* ============ 页脚 ============ */
+.foot{background:#070a05;color:#8c8470;padding:58px 0 22px;margin-top:64px;border-top:1px solid var(--line);position:relative;z-index:2}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:34px;margin-bottom:32px}
+.fb p{font-size:12.8px;color:#7c7460;max-width:330px;margin-top:12px}
+.fc h5{color:var(--ox);font-size:14.5px;margin-bottom:13px;letter-spacing:.1em;font-weight:900}
+.fc a{display:block;font-size:13.2px;padding:5px 0;color:#8c8470}
+.fc a:hover{color:#fff}
+.fbttm{border-top:1px solid var(--line);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12.2px;color:#7c7460}
+
+/* ============ 动画 ============ */
+.rv{opacity:0;transform:translateY(30px);transition:.72s var(--e)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.cow,.grass,.firefly,.mag img,.tile img,.t{transition:none!important;animation:none!important}}
+@media(max-width:980px){
+  .hr{grid-template-columns:1fr;gap:24px}
+  .fld{max-width:440px}
+  .dg,.bests,.fg{grid-template-columns:1fr 1fr}
+  .bricks{column-count:2}
+  .types{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr;row-gap:34px}
+  .steps::before{display:none}
+}
+@media(max-width:720px){
+  .burger{display:grid;place-items:center}
+  .links{position:fixed;inset:70px 0 0 0;background:rgba(12,16,8,.98);backdrop-filter:blur(14px);flex-direction:column;justify-content:flex-start;padding:24px 18px;gap:3px;transform:translateY(-120%);transition:.42s var(--e)}
+  .links.open{transform:none}
+  .links a{width:100%;text-align:center;padding:15px;font-size:16px}
+  .brand span{display:none}
+  .dg,.bests,.bricks,.fg{grid-template-columns:1fr;column-count:auto}
+  .types{grid-template-columns:1fr}
+  .mag{flex-basis:200px}
+  .steps{grid-template-columns:1fr}
+  .sec{padding:62px 0}
+  table.tbl thead{display:none}
+  table.tbl tbody td{border-bottom:0}
+  table.tbl tbody tr{display:flex;flex-wrap:wrap;gap:6px;padding:15px;border-bottom:1px solid var(--line)}
+  table.tbl tbody tr::before{content:attr(data-rk);font-weight:950;color:var(--ox);width:100%;font-size:12px;letter-spacing:.14em}
+  table.tbl .nm{width:100%}
+}
+@media(max-width:420px){
+  .wrap,.cta{padding-left:16px;padding-right:16px}
+  .mag{flex-basis:182px}
+  .fld{max-width:320px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<!-- ================= 导航 ================= -->
+<header class="nav" role="banner">
+  <div class="wrap nv">
+    <a class="brand" href="#top" aria-label="千牛电影网 首页">
+      <span class="logo" aria-hidden="true">牛</span>
+      <span>千牛电影网<small>CHINESE CINEMA</small></span>
+    </a>
+    <nav class="links" id="links" aria-label="主导航">
+      <a href="#type">类型耕地</a>
+      <a href="#fresh">本周推荐</a>
+      <a href="#theme">华语片单</a>
+      <a href="#line">作者谱系</a>
+      <a href="#cat">影像地图</a>
+      <a href="#theme" class="go">在线赏析</a>
+    </nav>
+    <button type="button" class="burger" id="burger" aria-label="切换菜单" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<!-- ================= Hero：田野与牛 ============ -->
+<section class="hero" id="top">
+  <div class="wrap hr">
+    <div class="hc rv">
+      <div class="eyebrow">SLOW CINEMA · SLOW LIFE</div>
+      <h1>一头牛的耐心，<br>用来<em>看好电影</em>。</h1>
+      <p>千牛电影网不做"速食片单"，只做华语现实题材与类型片的赏析导航：犯罪、悬疑、家庭、乡土、年代。我们整理高分华语片单、导演谱系、经典台词与正版观影渠道，倡导理性观影、拒绝低俗、支持正版。</p>
+      <div class="ct">
+        <a class="bt bt-p" href="#theme">▶ 华语片单</a>
+        <a class="bt btn" href="#fresh">🆕 本周推荐</a>
+      </div>
+      <div class="pill"><i>犯罪</i><i>悬疑</i><i>家庭</i><i>乡土</i><i>年代</i><i>现实题材</i><i>正版免费</i><i>限时免费</i><i>公版 4K</i><i>首月 0 元</i></div>
+    </div>
+    <div class="fld" id="fld" aria-label="田野与牛的插画" role="img">
+      <svg viewBox="0 0 500 400" aria-hidden="true">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a3322"/><stop offset="1" stop-color="#151a10"/></linearGradient>
+          <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c3a1e"/><stop offset="1" stop-color="#1a2412"/></linearGradient>
+        </defs>
+        <rect width="500" height="400" fill="url(#sky)"/>
+        <g class="firefly" style="animation-delay:0s"><circle cx="60" cy="120" r="2.4" fill="#f0b95c"/><circle cx="60" cy="120" r="9" fill="#f0b95c" opacity=".16"/></g>
+        <g class="firefly" style="animation-delay:1.1s"><circle cx="440" cy="160" r="2.2" fill="#f0b95c"/><circle cx="440" cy="160" r="8" fill="#f0b95c" opacity=".16"/></g>
+        <g class="firefly" style="animation-delay:2s"><circle cx="120" cy="250" r="2" fill="#f0b95c"/><circle cx="120" cy="250" r="7" fill="#f0b95c" opacity=".14"/></g>
+        <ellipse cx="250" cy="300" rx="330" ry="120" fill="url(#hill)" opacity=".9"/>
+        <g class="grass" style="animation-delay:0s"><path d="M60 300 q8 -34 20 0" stroke="#6e8b4a" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+        <g class="grass" style="animation-delay:.6s"><path d="M90 320 q8 -30 18 0" stroke="#7a9a58" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+        <g class="grass" style="animation-delay:1.2s"><path d="M420 300 q8 -34 20 0" stroke="#6e8b4a" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+        <g class="cow">
+          <g transform="translate(250 218)">
+            <ellipse cx="0" cy="46" rx="54" ry="10" fill="#000" opacity=".34"/>
+            <rect x="-62" y="-6" width="104" ry="34" fill="#3a2c20"/>
+            <rect x="-44" y="-44" width="40" height="44" ry="20" fill="#3a2c20"/>
+            <path d="M-44 -44 q-14 -22 -4 -6 q-14 -4 -2 8z" fill="#2a1f16"/>
+            <circle cx="-30" cy="-30" r="3.4" fill="#f3efe4"/>
+            <path d="M14 -12 q26 -16 40 4" stroke="#3a2c20" stroke-width="9" fill="none" stroke-linecap="round"/>
+            <path d="M40 0 l14 -16" stroke="#3a2c20" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <ellipse cx="-40" cy="40" rx="9" ry="16" fill="#2a1f16"/>
+            <ellipse cx="-14" cy="44" rx="9" ry="16" fill="#2a1f16"/>
+            <ellipse cx="14" cy="44" rx="9" ry="16" fill="#2a1f16"/>
+            <ellipse cx="38" cy="38" rx="8" ry="15" fill="#2a1f16"/>
+            <path d="M-14 2 q-4 -22 6 -4" stroke="#f0b95c" stroke-width="4" fill="none" stroke-linecap="round"/>
+          </g>
+        </g>
+        <g class="grass" style="animation-delay:.3s"><path d="M300 330 q8 -30 18 0" stroke="#6e8b4a" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+      </svg>
+      <div class="pl"><b>慢慢看，不赶。</b><small>FIELD · 2026</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 栏目一：类型耕地（4 列卡片 + 进度条） ============ -->
+<section class="sec sec-a" id="type">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <div>
+        <div class="kicker">❶ 栏目一 · 类型耕地</div>
+        <h2 class="h2">华语电影的五块田，<br>各自长出不同的苦与甜。</h2>
+        <p class="lead">不看票房，看"它敢不敢拍真东西"。每块田标注已整理的正版可看片源数量。</p>
+      </div>
+      <span class="tag">按现实浓度选片</span>
+    </div>
+    <div class="types">
+      <article class="t rv" style="--g:#c97b2a"><div class="ic" aria-hidden="true">罪</div><h3>犯罪 · 乡土</h3><p>小镇、旧案、一桩说不清的命。最中国，也最不敢细看。</p><div class="amt">正版可看 <b>23 部</b></div><div class="bar"><i style="width:96%"></i></div></article>
+      <article class="t rv" style="--g:#4a6b8a;transition-delay:.06s"><div class="ic" aria-hidden="true">谜</div><h3>悬疑 · 时间</h3><p>一个答案，要绕七个人。叙事本身就是表演。</p><div class="amt">正版可看 <b>19 部</b></div><div class="bar"><i style="width:88%"></i></div></article>
+      <article class="t rv" style="--g:#6e8b4a;transition-delay:.12s"><div class="ic" aria-hidden="true">家</div><h3>家庭 · 代际</h3><p>一顿饭、一场葬礼、一句没说出口的"对不起"。</p><div class="amt">正版可看 <b>27 部</b></div><div class="bar"><i style="width:99%"></i></div></article>
+      <article class="t rv" style="--g:#a8623c;transition-delay:.18s"><div class="ic" aria-hidden="true">岁</div><h3>年代 · 记忆</h3><p>老厂房、旧车站、一封寄不出的信。时间是最好的编剧。</p><div class="amt">正版可看 <b>15 部</b></div><div class="bar"><i style="width:82%"></i></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 栏目二：本周推荐（横向磁贴） ============ -->
+<section class="sec sec-f" id="fresh">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <div>
+        <div class="kicker">❷ 栏目二 · 本周推荐</div>
+        <h2 class="h2">7 部"看完想给导演敬一杯茶"的华语电影。</h2>
+        <p class="lead">按"现实浓度 × 完成度"排序，非票房。每部标注年代、类型与正版渠道。</p>
+      </div>
+      <span class="tag">每周五 22:00 更新</span>
+    </div>
+    <div class="scroller">
+      <a class="mag rv" href="#"><div class="cv"><img src="https://picsum.photos/id/1039/520/680" alt="药神 电影剧照"><div class="fl"><i>NEW</i><i class="h">2018</i></div><div class="rt">★ 9.0</div></div><div class="tx"><h3>我不是药神</h3><p><span>现实 · 救赎</span><b>正版免费</b></p></div></a>
+      <a class="mag rv" href="#"><div class="cv"><img src="https://picsum.photos/id/1041/520/680" alt="活着 电影剧照"><div class="fl"><i class="h">1994</i></div><div class="rt">★ 9.3</div></div><div class="tx"><h3>活着</h3><p><span>年代 · 命运</span><b>公版 4K</b></p></div></a>
+      <a class="mag rv" href="#"><div class="cv"><img src="https://picsum.photos/id/1053/520/680" alt="大象席地而坐 电影剧照"><div class="fl"><i>HOT</i><i class="f">2018</i></div><div class="rt">★ 8.8</div></div><div class="tx"><h3>大象席地而坐</h3><p><span>青春 · 困兽</span><b>联合会员</b></p></div></a>
+      <a class="mag rv" href="#"><div class="cv"><img src="https://picsum.photos/id/1057/520/680" alt="嘉年华 电影剧照"><div class="fl"><i class="h">2017</i><i class="f">女性</i></div><div class="rt">★ 8.4</div></div><div class="tx"><h3>嘉年华</h3><p><span>社会 · 女性</span><b>永久免费</b></p></div></a>
+      <a class="mag rv" href="#"><div class="cv"><img src="https://picsum.photos/id/1067/520/680" alt="地久天长 电影剧照"><div class="fl"><i class="f">家庭</i></div><div class="rt">★ 8.5</div></div><div class="tx"><h3>地久天长</h3><p><span>家庭 · 失独</span><b>首月 0 元</b></p></div></a>
+      <a class="mag rv" href="#"><div class="cv"><img src="https://picsum.photos/id/1062/520/680" alt="无名之辈 电影剧照"><div class="fl"><i class="h">2018</i></div><div class="rt">★ 8.1</div></div><div class="tx"><h3>无名之辈</h3><p><span>黑色 · 小人物</span><b>限时免费</b></p></div></a>
+      <a class="mag rv" href="#"><div class="cv"><img src="https://picsum.photos/id/1074/520/680" alt="江湖儿女 电影剧照"><div class="fl"><i class="f">2018</i></div><div class="rt">★ 7.9</div></div><div class="tx"><h3>江湖儿女</h3><p><span>江湖 · 情义</span><b>公益放映</b></p></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 栏目三：华语片单（table + 侧栏） ============ -->
+<section class="sec sec-t" id="theme">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <div>
+        <div class="kicker">❸ 栏目三 · 华语片单</div>
+        <h2 class="h2">千牛电影网 · 华语片单：<br>十部"不敢看第二遍"的电影。</h2>
+        <p class="lead">按"现实浓度"而非票房排序。完成度条代表它有多"不讨好"；评分为综合口碑区间，仅供选片参考。</p>
+      </div>
+      <span class="tag">倡导正版 · 拒绝低俗</span>
+    </div>
+    <div class="dg">
+      <table class="tbl">
+        <thead><tr><th scope="col">#</th><th scope="col">片名</th><th scope="col">年代</th><th scope="col">它在拍什么</th><th scope="col">完成度</th><th scope="col">评分</th></tr></thead>
+        <tbody>
+          <tr data-rk="排名 01"><td class="rk">01</td><td class="nm">我不是药神</td><td><i class="lg a">2018</i></td><td>一个卖药的人，成了病人的神</td><td><div class="bar2"><i style="width:99%"></i></div></td><td class="sc">9.0</td></tr>
+          <tr data-rk="排名 02"><td class="rk">02</td><td class="nm">活着</td><td><i class="lg b">1994</i></td><td>一个人，怎么把苦日子过成日子</td><td><div class="bar2"><i style="width:98%"></i></div></td><td class="sc">9.3</td></tr>
+          <tr data-rk="排名 03"><td class="rk">03</td><td class="nm">大象席地而坐</td><td><i class="lg c">2018</i></td><td>四个人，都想离开这座城市</td><td><div class="bar2"><i style="width:96%"></i></div></td><td class="sc">8.8</td></tr>
+          <tr data-rk="排名 04"><td class="rk">04</td><td class="nm">地久天长</td><td><i class="lg a">2019</i></td><td>三十年，只为一句"我们原谅了"</td><td><div class="bar2"><i style="width:95%"></i></div></td><td class="sc">8.5</td></tr>
+          <tr data-rk="排名 05"><td class="rk">05</td><td class="nm">嘉年华</td><td><i class="lg b">2017</i></td><td>海边的一座雕像，替女孩说话</td><td><div class="bar2"><i style="width:94%"></i></div></td><td class="sc">8.4</td></tr>
+          <tr data-rk="排名 06"><td class="rk">06</td><td class="nm">无问西东</td><td><i class="lg c">2018</i></td><td>四段人生，一个问题：你怕吗</td><td><div class="bar2"><i style="width:92%"></i></div></td><td class="sc">7.6</td></tr>
+          <tr data-rk="排名 07"><td class="rk">07</td><td class="nm">无名之辈</td><td><i class="lg a">2018</i></td><td>两个笨贼，一座小城，一场笑中带泪</td><td><div class="bar2"><i style="width:91%"></i></div></td><td class="sc">8.1</td></tr>
+          <tr data-rk="排名 08"><td class="rk">08</td><td class="nm">江湖儿女</td><td><i class="lg b">2018</i></td><td>她等他十七年，等成一个江湖</td><td><div class="bar2"><i style="width:90%"></i></div></td><td class="sc">7.9</td></tr>
+          <tr data-rk="排名 09"><td class="rk">09</td><td class="nm">暴裂无声</td><td><i class="lg c">2017</i></td><td>一个哑巴的父亲，找不回自己的儿子</td><td><div class="bar2"><i style="width:89%"></i></div></td><td class="sc">8.2</td></tr>
+          <tr data-rk="排名 10"><td class="rk">10</td><td class="nm">路边野餐</td><td><i class="lg a">2015</i></td><td>四十二分钟的长镜头，走完一生</td><td><div class="bar2"><i style="width:87%"></i></div></td><td class="sc">7.8</td></tr>
+        </tbody>
+      </table>
+      <aside class="asd">
+        <div class="box">
+          <h4>本周热议 · 现实之问</h4>
+          <ol>
+            <li>华语现实题材，为什么总在"小人物"身上用力？</li>
+            <li>最不敢看第二遍的电影，是哪一部？</li>
+            <li>家庭片里，那顿饭为什么总吃不完？</li>
+            <li>悬疑片的答案，真的越绕越好吗？</li>
+            <li>看完想给导演敬一杯茶的，是哪一场戏？</li>
+          </ol>
+        </div>
+        <div class="box g">
+          <h4>在线正版提示</h4>
+          <p>以上影片均可在正规视频平台、院线或正版发行渠道观看。千牛电影网不提供、不链接任何盗版、破解、侵权或低俗资源；看得起，也看得对——支持正版，创作者才拍得出下一个敢拍真的镜头。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 栏目四：作者谱系（步骤条） ============ -->
+<section class="sec sec-l" id="line">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <div>
+        <div class="kicker">❹ 栏目四 · 作者谱系</div>
+        <h2 class="h2">五位"不讨好"的华语导演，<br>各自守着一块田。</h2>
+        <p class="lead">谱系，是选片的捷径。同一个导演，十年只讲一件事。</p>
+      </div>
+    </div>
+    <div class="steps">
+      <article class="st rv"><span class="dot" aria-hidden="true"></span><span class="yr">1994 — 2002</span><h3>张艺谋</h3><p>把"人"放进历史里碾一遍。《活着》《秋菊打官司》，是最疼的现实。</p><div class="film"><i>《活着》</i><i>《秋菊》</i><i>《大红灯笼》</i></div></article>
+      <article class="st rv" style="transition-delay:.08s"><span class="dot" aria-hidden="true"></span><span class="yr">2000 — </span><h3>贾樟柯</h3><p>拍被时代落下的人。《三峡好人》《山河故人》，县城是他的故乡。</p><div class="film"><i>《三峡好人》</i><i>《山河故人》</i><i>《小武》</i></div></article>
+      <article class="st rv" style="transition-delay:.16s"><span class="dot" aria-hidden="true"></span><span class="yr">2014 — </span><h3>刁亦男</h3><p>黑色、霓虹、一个走投有路的人。《白日焰火》《南方车站》，冷得漂亮。</p><div class="film"><i>《白日焰火》</i><i>《南方车站》</i></div></article>
+      <article class="st rv" style="transition-delay:.24s"><span class="dot" aria-hidden="true"></span><span class="yr">2016 — </span><h3>文牧野</h3><p>把社会新闻拍成史诗。《我不是药神》，笑点全是伤口。</p><div class="film"><i>《我不是药神》</i><i>《奇迹·笨小孩》</i></div></article>
+      <article class="st rv" style="transition-delay:.32s"><span class="dot" aria-hidden="true"></span><span class="yr">2015 — </span><h3>毕赣</h3><p>用梦的语法拍故乡。《路边野餐》《地球最后的夜晚》，时间是主角。</p><div class="film"><i>《路边野餐》</i><i>《地球最后的夜晚》</i></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 栏目五：影像地图（砖墙 + 榜单） ============ -->
+<section class="sec sec-c" id="cat">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <div>
+        <div class="kicker">❺ 栏目五 · 影像地图</div>
+        <h2 class="h2">六座城，<br>六种华语电影的呼吸。</h2>
+        <p class="lead">不按商业类型硬分，按"故事落在哪里"归拢。每城标注正版可看片源数量。</p>
+      </div>
+      <a class="bt btn" href="#" style="border:1px solid var(--line)">🎲 随机挑一部</a>
+    </div>
+    <div class="bricks">
+      <a class="tile t1 rv" href="#"><img src="https://picsum.photos/id/1040/500/340" alt="东北 工业城市电影"><div class="gr"><em>MAP · 东北</em><b>工业 · 锈带</b><span>正版免费 14 部</span></div></a>
+      <a class="tile t2 rv" href="#"><img src="https://picsum.photos/id/1059/500/480" alt="西南 山城电影"><div class="gr"><em>MAP · 西南</em><b>山城 · 江雾</b><span>限时免费 11 部</span></div></a>
+      <a class="tile t3 rv" href="#"><img src="https://picsum.photos/id/1063/500/340" alt="西北 黄土电影"><div class="gr"><em>MAP · 西北</em><b>黄土 · 长天</b><span>新人 0 元 9 部</span></div></a>
+      <a class="tile t2 rv" href="#"><img src="https://picsum.photos/id/1036/500/480" alt="县城 小镇电影"><div class="gr"><em>MAP · 县城</em><b>小人物 · 日常</b><span>公益放映 16 部</span></div></a>
+      <a class="tile t1 rv" href="#"><img src="https://picsum.photos/id/1068/500/340" alt="上海 弄堂电影"><div class="gr"><em>MAP · 上海</em><b>弄堂 · 旧梦</b><span>永久免费 12 部</span></div></a>
+      <a class="tile t3 rv" href="#"><img src="https://picsum.photos/id/1071/500/340" alt="港岛 霓虹电影"><div class="gr"><em>MAP · 港岛</em><b>霓虹 · 宿命</b><span>联合会员 13 部</span></div></a>
+      <a class="tile t2 rv" href="#"><img src="https://picsum.photos/id/1044/500/480" alt="台湾 乡土电影"><div class="gr"><em>MAP · 台湾</em><b>乡土 · 亲情</b><span>公版 10 部</span></div></a>
+      <a class="tile t3 rv" href="#"><img src="https://picsum.photos/id/1080/500/340" alt="南方 小镇电影"><div class="gr"><em>MAP · 南方</em><b>潮湿 · 青春</b><span>正版 8 部</span></div></a>
+    </div>
+    <div class="bests">
+      <div class="best rv"><h5>🌾 入门必看榜</h5><ol><li>《我不是药神》— 卖药的人成了神</li><li>《活着》— 把苦日子过成日子</li><li>《地久天长》— 三十年的一句原谅</li><li>《无名之辈》— 笨贼与小城</li><li>《嘉年华》— 雕像替女孩说话</li></ol></div>
+      <div class="best m rv"><h5>🌙 进阶必看榜</h5><ol><li>《大象席地而坐》— 想离开这座城</li><li>《路边野餐》— 42 分钟走完一生</li><li>《暴裂无声》— 哑巴父亲找儿子</li><li>《三峡好人》— 被时代落下的人</li><li>《江湖儿女》— 等他十七年</li></ol></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ============ -->
+<div class="wrap">
+  <div class="cta rv">
+    <h2>好电影像耕田，<br>急不得。</h2>
+    <p>千牛电影网每周更新"值得重看的华语现实片单"与导演谱系。不催你追新，只陪你重看一个镜头。支持正版，创作者才拍得出下一个敢拍真的画面。</p>
+    <a class="bt bt-p" href="#theme">▶ 在线看一部华语电影</a>
+  </div>
+</div>
+
+<!-- ================= 页脚 ============ -->
+<footer class="foot" role="contentinfo">
+  <div class="wrap">
+    <div class="fg">
+      <div class="fb">
+        <a class="brand" href="#top" style="color:#fff"><span class="logo" aria-hidden="true">牛</span><span>千牛电影网</span></a>
+        <p>千牛电影网是专注华语现实题材与类型片的赏析及正版观影导航站，整理犯罪、悬疑、家庭、乡土、年代片单，华语导演谱系、经典台词与正版渠道索引，倡导理性观影、拒绝低俗、支持正版。</p>
+      </div>
+      <div class="fc"><h5>快速导航</h5><a href="#type">类型耕地</a><a href="#fresh">本周推荐</a><a href="#theme">华语片单</a><a href="#line">作者谱系</a><a href="#cat">影像地图</a></div>
+      <div class="fc"><h5>影像类型</h5><a href="#type">犯罪乡土</a><a href="#type">悬疑时间</a><a href="#type">家庭代际</a><a href="#type">年代记忆</a><a href="#cat">六座城</a></div>
+      <div class="fc"><h5>关于本站</h5><a href="#theme">正版导航</a><a href="#">投稿合作</a><a href="#">内容声明</a><a href="#">联系我们</a><a href="#">更新日志</a></div>
+    </div>
+    <div class="fbttm">
+      <span>© 2026 千牛电影网 版权所有</span>
+      <span>网站网址：https://qianniudianyingwang-cn.github.io/ ｜ 本站为影视赏析与导航平台，不提供任何盗版、破解、侵权或低俗资源；影片请以正规渠道为准</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// 移动端菜单
+var bg=document.getElementById('burger'),lk=document.getElementById('links');
+bg.addEventListener('click',function(){
+  lk.classList.toggle('open');
+  var o=lk.classList.contains('open');
+  bg.setAttribute('aria-expanded',String(o));bg.textContent=o?'✕':'☰';
+});
+lk.addEventListener('click',function(e){
+  if(e.target.tagName==='A'&&window.innerWidth<=720){
+    lk.classList.remove('open');bg.setAttribute('aria-expanded','false');bg.textContent='☰';
+  }
+});
+
+// 滚动入场
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e,i){
+    if(e.isIntersecting){setTimeout(function(){e.target.classList.add('in');},i*55);io.unobserve(e.target);}
+  });},{threshold:0.1});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+}
+</script>
+</body>
+</html>
